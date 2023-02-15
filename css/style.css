@@ -136,8 +136,11 @@ color: var(--primary-txt-cl);
 }
 
 
+
 .header-mail{
 color: var(--primary-txt-cl);
+padding-top: 24px;
+padding-bottom: 24px;
 }
 .header-mail:hover,
 .header-mail:focus {
@@ -146,6 +149,8 @@ color: var(--accent-txt-cl);
 
 .header-contact {
 color: var(--primary-txt-cl);
+padding-top: 24px;
+    padding-bottom: 24px;
 }
 .header-contact:hover,
 .header-contact:focus {
