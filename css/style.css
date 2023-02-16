@@ -256,6 +256,10 @@ align-items: center;
 justify-content: center;
 cursor: pointer;
 margin: 24px 24px 528px 360px;
+transition-property: background-color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-delay: 250ms;
 }
 
 .modal-button:hover,
@@ -283,7 +287,12 @@ border-radius: 4px;
 .modal-icon{
 display: block;
 justify-content: center;
-align-items: center;      
+align-items: center; 
+transition-property: fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-delay: 250ms;
+
 }
 .modal-icon:hover,
 .modal-icon:focus{
