@@ -261,6 +261,7 @@ border-radius: 50px;
 align-items: center;
 justify-content: center;
 cursor: pointer;
+position: absolute;
 margin: 24px 24px 528px 360px;
 transition-property: background-color, fill ;
 transition-duration: 250ms;
