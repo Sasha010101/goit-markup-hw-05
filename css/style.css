@@ -258,6 +258,17 @@ cursor: pointer;
 margin: 24px 24px 528px 360px;
 }
 
+.modal-button:hover,
+.modal-button:focus{
+background-color: var(--icon-ocean-cl);
+}
+    
+.modal-button-svg{
+
+}
+
+
+
 .modal {
 position: absolute;
 top: 50%;
@@ -274,9 +285,14 @@ display: block;
 justify-content: center;
 align-items: center;      
 }
-       
-.feature {
+.modal-icon:hover,
+.modal-icon:focus{
+    fill: #FFFFFF;
 }
+
+       
+.feature {}
+
 
 .feature-container{}
 
