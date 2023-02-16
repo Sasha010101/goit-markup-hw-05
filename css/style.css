@@ -7,12 +7,14 @@
 --secondary-txt-cl:#434455;
 --accent-txt-cl:#4D5AE5;
 /* BG colors */
-  --primary-bg-cl: #FFFFFF;
- --accent-bg-cl:#4D5AE5;
- --icon-clr-cl:#8E8F99;
- --icon-ocean-cl:#404BBF;
+--primary-bg-cl: #FFFFFF;
+--accent-bg-cl:#4D5AE5;
+--icon-clr-cl:#8E8F99;
+--icon-ocean-cl:#404BBF;
 --icon-modal-cl: #FCFCFC;
- /* Others */
+/* Others */
+--trns-fast: 400ms ease-in;
+--trns-slow: 1800ms ease-in-out;
      
 }
 /* Studio */
@@ -125,7 +127,7 @@ padding-bottom: 24px;
 transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
+
 
 color: var(--primary-txt-cl);
 
@@ -148,7 +150,7 @@ padding-bottom: 24px;
 transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
+
 }
 .header-mail:hover,
 .header-mail:focus {
@@ -162,7 +164,7 @@ padding-bottom: 24px;
 transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
+
 }
 .header-contact:hover,
 .header-contact:focus {
@@ -215,7 +217,7 @@ padding: 16px 32px;
 transition-property: background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
+
 }
     
 .hero-button:hover,
@@ -238,6 +240,8 @@ left: 0;
 width: 100%;
 height: 100%;
 background-color: rgba(46, 47, 66, 0.4);
+transition: opacity var(--trns-fast), visibility var(--trns-fast);
+
 }
 
 .backdrop.is-hidden{
@@ -250,24 +254,28 @@ pointer-events: none;
 display: flex;
 width: 24px;
 height: 24px;
+background-color: #E7E9FC;
+fill: #000000;
 border: 1px solid #E7E9FC;
 border-radius: 50px;
 align-items: center;
 justify-content: center;
 cursor: pointer;
 margin: 24px 24px 528px 360px;
-transition-property: background-color;
+transition-property: background-color, fill ;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
+
 }
 
+
+
+
+    
 .modal-button:hover,
 .modal-button:focus{
-background-color: var(--icon-ocean-cl);
-}
-    
-.modal-button-svg{
+    fill: #FCFCFC;
+    background-color: var(--icon-ocean-cl);
 
 }
 
@@ -281,22 +289,20 @@ transform: translate(-50%, -50%);
 width: 408px;
 height: 576px;
 background-color: var(--icon-modal-cl);
+box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px, rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.14) 0px 1px 1px;
 border-radius: 4px;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: transform 150ms ease, opacity 150ms ease;
+}
+.backdrop.is-hidden .modal {
+transform: translate(-50%, -70%);
+opacity: 0;
 }
 
 .modal-icon{
-display: block;
-justify-content: center;
-align-items: center; 
-transition-property: fill;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
 
-}
-.modal-icon:hover,
-.modal-icon:focus{
-    fill: #FFFFFF;
+
 }
 
        
@@ -577,7 +583,7 @@ background-color: var(--accent-bg-cl);
 transition-property:background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
+
 
 }
 .social-link:hover,
@@ -628,7 +634,7 @@ color: var(--icon-clr-cl);
 transition-property:border, color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
+
     
 }
 .customers-icon{
@@ -730,7 +736,7 @@ background-color:rgba(255, 255, 255, 0.1);
 transition-property: background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
+
 }
 .footer-link:hover,
 .footer-focus{
@@ -811,16 +817,17 @@ border: none;
 cursor: pointer;
 padding: 12px 24px;
 border-radius: 4px;
+
 transition-property: color, box-shadow, background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
+
 
 }
 .filters-button:hover,
 .filters-button:focus {
 color: #FFFFFF;
-background-color: var(--accent-bg-cl);}
+background-color: var(--icon-ocean-cl);}
 
 .filters-button:hover,
 .filters-button:focus{
@@ -855,7 +862,7 @@ margin: 0;
 transition-property: color, box-shadow, background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 250ms;
+
 
 }
 .row-item:hover,
